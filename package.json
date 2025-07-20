@@ -1,0 +1,80 @@
+{
+  "name": "office-workspace-design-system",
+  "version": "1.0.0",
+  "description": "A comprehensive design system foundation for modern web applications using Tailwind CSS and core web technologies",
+  "main": "design-system.js",
+  "scripts": {
+    "dev": "live-server --port=3000 --open=/index.html",
+    "build": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:js": "terser design-system.js -o dist/design-system.min.js --compress --mangle",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:js": "eslint '**/*.js'",
+    "test": "echo \"No tests specified\" && exit 0",
+    "validate": "npm run lint:css && npm run lint:js",
+    "format": "prettier --write '**/*.{html,css,js,json,md}'",
+    "serve": "http-server -p 8080 -o"
+  },
+  "keywords": [
+    "design-system",
+    "tailwindcss",
+    "css",
+    "javascript",
+    "ui",
+    "components",
+    "accessibility",
+    "responsive",
+    "theme",
+    "tokens"
+  ],
+  "author": "Office Workspace Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/office-workspace-design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/office-workspace-design-system/issues"
+  },
+  "homepage": "https://github.com/your-org/office-workspace-design-system#readme",
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.3",
+    "stylelint-config-standard": "^36.0.0",
+    "tailwindcss": "^3.3.6",
+    "terser": "^5.24.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "files": [
+    "design-tokens.css",
+    "tailwind.config.js",
+    "design-system.js",
+    "index.html",
+    "README.md"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+} 

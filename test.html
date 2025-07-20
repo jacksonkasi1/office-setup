@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Employee Intranet Dashboard</title>
+    <link rel="stylesheet" href="dist/output.css">
+    <style>
+        /* Test styles to verify CSS is loading */
+        .test-red {
+            background-color: var(--color-primary);
+            color: var(--color-text-inverse);
+            padding: var(--spacing-4);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-4);
+        }
+    </style>
+</head>
+<body>
+    <div class="test-red">
+        <h1>CSS Test - If you see this with orange background, CSS is working!</h1>
+        <p>Primary color: var(--color-primary)</p>
+        <p>Font family: var(--font-family-sans)</p>
+    </div>
+    
+    <!-- Test the actual dashboard styles -->
+    <div class="global-header">
+        <div class="header-content">
+            <div class="logo">TEST LOGO</div>
+        </div>
+    </div>
+    
+    <div class="dashboard-container">
+        <div class="dashboard-card">
+            <h2>Test Dashboard Card</h2>
+            <p>If you see this styled, the dashboard CSS is working!</p>
+        </div>
+    </div>
+</body>
+</html>

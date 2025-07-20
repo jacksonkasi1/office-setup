@@ -3,384 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design System - Office Workspace</title>
+    <title>Employee Intranet Dashboard - Office Workspace</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="dist/output.css">
-    <style>
-        /* Custom styles using design tokens */
-        body {
-            font-family: var(--font-family-sans);
-            color: var(--color-text-primary);
-            background-color: var(--color-bg-secondary);
-        }
-        
-        .design-system-demo {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: var(--spacing-8);
-        }
-        
-        .component-section {
-            margin-bottom: var(--spacing-12);
-            padding: var(--spacing-6);
-            background: var(--color-bg-primary);
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md);
-        }
-        
-        .color-swatch {
-            display: inline-block;
-            width: 80px;
-            height: 80px;
-            border-radius: var(--radius-md);
-            margin: var(--spacing-2);
-            border: 1px solid var(--color-border-light);
-        }
-        
-        .typography-scale {
-            margin: var(--spacing-4) 0;
-        }
-        
-        .spacing-demo {
-            background: var(--color-primary);
-            color: var(--color-text-inverse);
-            text-align: center;
-            font-size: var(--font-size-xs);
-        }
-    </style>
 </head>
-<body>
-    <div class="design-system-demo">
-        <header class="mb-8">
-            <h1 class="text-4xl font-bold text-primary-500 mb-2">Design System</h1>
-            <p class="text-lg text-text-secondary">Office Workspace - Complete Design Token Foundation</p>
-        </header>
-
-        <!-- Color System -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Color System</h2>
+<body class="dashboard-body">
+    <!-- Main Layout Container -->
+    <div class="dashboard-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" role="navigation">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Office Workspace</h1>
+                        <p>Dashboard</p>
+                    </div>
+                </div>
+            </div>
             
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Brand Colors</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="text-center">
-                        <div class="color-swatch bg-orange-red"></div>
-                        <p class="text-sm mt-2">Orange Red</p>
-                        <p class="text-xs text-text-tertiary">#FF4200</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-gainsboro"></div>
-                        <p class="text-sm mt-2">Gainsboro</p>
-                        <p class="text-xs text-text-tertiary">#E3E4E7</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-eerie-black"></div>
-                        <p class="text-sm mt-2 text-white">Eerie Black</p>
-                        <p class="text-xs text-text-tertiary">#222121</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-blue-violet"></div>
-                        <p class="text-sm mt-2 text-white">Blue Violet</p>
-                        <p class="text-xs text-text-tertiary">#8435F2</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Status Colors</h3>
-                <div class="flex flex-wrap gap-4">
-                    <div class="text-center">
-                        <div class="color-swatch bg-success-500"></div>
-                        <p class="text-sm mt-2">Success</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-warning-500"></div>
-                        <p class="text-sm mt-2">Warning</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-error-500"></div>
-                        <p class="text-sm mt-2">Error</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="color-swatch bg-info-500"></div>
-                        <p class="text-sm mt-2">Info</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Priority Tags</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="badge badge-prospecting">Prospecting</span>
-                    <span class="badge badge-meeting">Meeting</span>
-                    <span class="badge badge-negotiation">Negotiation</span>
-                    <span class="badge badge-won">Won</span>
-                    <span class="badge badge-qualification">Qualification</span>
-                    <span class="badge badge-proposal">Proposal</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Typography -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Typography</h2>
-            
-            <div class="typography-scale">
-                <h1 class="text-6xl font-bold mb-2">Heading 1 (6xl)</h1>
-                <h2 class="text-5xl font-bold mb-2">Heading 2 (5xl)</h2>
-                <h3 class="text-4xl font-semibold mb-2">Heading 3 (4xl)</h3>
-                <h4 class="text-3xl font-semibold mb-2">Heading 4 (3xl)</h4>
-                <h5 class="text-2xl font-semibold mb-2">Heading 5 (2xl)</h5>
-                <h6 class="text-xl font-semibold mb-2">Heading 6 (xl)</h6>
-                <p class="text-lg mb-2">Large Body Text (lg)</p>
-                <p class="text-base mb-2">Base Body Text (base)</p>
-                <p class="text-sm mb-2">Small Body Text (sm)</p>
-                <p class="text-xs mb-2">Extra Small Text (xs)</p>
-            </div>
-
-            <div class="mt-8">
-                <h3 class="text-lg font-medium mb-4">Font Weights</h3>
-                <p class="font-light mb-2">Light (300)</p>
-                <p class="font-normal mb-2">Normal (400)</p>
-                <p class="font-medium mb-2">Medium (500)</p>
-                <p class="font-semibold mb-2">Semibold (600)</p>
-                <p class="font-bold mb-2">Bold (700)</p>
-                <p class="font-extrabold mb-2">Extrabold (800)</p>
-            </div>
-        </section>
-
-        <!-- Buttons -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Buttons</h2>
-            
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Button Sizes</h3>
-                <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-sm btn-primary">Small</button>
-                    <button class="btn btn-md btn-primary">Medium</button>
-                    <button class="btn btn-lg btn-primary">Large</button>
-                    <button class="btn btn-xl btn-primary">Extra Large</button>
-                </div>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Button Variants</h3>
-                <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-md btn-primary">Primary</button>
-                    <button class="btn btn-md btn-secondary">Secondary</button>
-                    <button class="btn btn-md btn-ghost">Ghost</button>
-                    <button class="btn btn-md btn-danger">Danger</button>
-                </div>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Button States</h3>
-                <div class="flex flex-wrap items-center gap-4">
-                    <button class="btn btn-md btn-primary">Normal</button>
-                    <button class="btn btn-md btn-primary" disabled>Disabled</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Form Elements -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Form Elements</h2>
-            
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Input Sizes</h3>
-                <div class="space-y-4 max-w-md">
-                    <input type="text" class="input input-sm" placeholder="Small input">
-                    <input type="text" class="input input-md" placeholder="Medium input">
-                    <input type="text" class="input input-lg" placeholder="Large input">
-                </div>
-            </div>
-
-            <div class="mb-8">
-                <h3 class="text-lg font-medium mb-4">Input States</h3>
-                <div class="space-y-4 max-w-md">
-                    <input type="text" class="input input-md" placeholder="Normal state">
-                    <input type="text" class="input input-md" value="Focused state" autofocus>
-                    <input type="text" class="input input-md" value="Disabled state" disabled>
-                </div>
-            </div>
-        </section>
-
-        <!-- Cards -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Cards</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="text-lg font-semibold">Card Header</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>This is the card body content. Cards are used to group related content and actions.</p>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-sm btn-primary">Action</button>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="text-lg font-semibold mb-2">Simple Card</h3>
-                        <p>Cards can have different layouts and content structures.</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="text-lg font-semibold">Interactive Card</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Cards can be interactive and contain various UI elements.</p>
-                        <div class="mt-4">
-                            <span class="badge badge-won">Won</span>
-                            <span class="badge badge-meeting">Meeting</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Spacing System -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Spacing System</h2>
-            
-            <div class="space-y-4">
-                <div class="spacing-demo" style="width: var(--spacing-1); height: var(--spacing-1);">1</div>
-                <div class="spacing-demo" style="width: var(--spacing-2); height: var(--spacing-2);">2</div>
-                <div class="spacing-demo" style="width: var(--spacing-4); height: var(--spacing-4);">4</div>
-                <div class="spacing-demo" style="width: var(--spacing-8); height: var(--spacing-8);">8</div>
-                <div class="spacing-demo" style="width: var(--spacing-16); height: var(--spacing-16);">16</div>
-            </div>
-        </section>
-
-        <!-- Layout Examples -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Layout Examples</h2>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="bg-bg-secondary p-6 rounded-lg">
-                    <h3 class="text-lg font-semibold mb-4">Sidebar Layout</h3>
-                    <div class="grid grid-cols-sidebar-layout gap-4">
-                        <div class="bg-bg-sidebar text-white p-4 rounded">Sidebar</div>
-                        <div class="bg-bg-primary p-4 rounded">Main Content</div>
-                    </div>
-                </div>
-
-                <div class="bg-bg-secondary p-6 rounded-lg">
-                    <h3 class="text-lg font-semibold mb-4">Header Layout</h3>
-                    <div class="grid grid-cols-header-layout gap-4">
-                        <div class="bg-bg-primary p-2 rounded text-center">Logo</div>
-                        <div class="bg-bg-primary p-2 rounded text-center">Navigation</div>
-                        <div class="bg-bg-primary p-2 rounded text-center">Actions</div>
-                    </div>
-                </div>
-
-                <div class="bg-bg-secondary p-6 rounded-lg">
-                    <h3 class="text-lg font-semibold mb-4">Card Grid</h3>
-                    <div class="grid grid-cols-card-layout gap-4">
-                        <div class="bg-bg-primary p-4 rounded">Card 1</div>
-                        <div class="bg-bg-primary p-4 rounded">Card 2</div>
-                        <div class="bg-bg-primary p-4 rounded">Card 3</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Responsive Design -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Responsive Design</h2>
-            
-            <div class="space-y-4">
-                <div class="bg-primary-100 p-4 rounded">
-                    <p class="text-sm md:text-base lg:text-lg">
-                        This text scales responsively: Small on mobile, base on tablet, large on desktop.
-                    </p>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <p class="nav-section-title">MAIN</p>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-item active"><i class="fas fa-home"></i> Overview</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-users"></i> Employees</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-calendar"></i> Calendar</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                    </ul>
                 </div>
                 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <div class="bg-bg-primary p-4 rounded text-center">1 Col (Mobile)</div>
-                    <div class="bg-bg-primary p-4 rounded text-center">2 Col (Tablet)</div>
-                    <div class="bg-bg-primary p-4 rounded text-center">4 Col (Desktop)</div>
-                    <div class="bg-bg-primary p-4 rounded text-center">4 Col (Desktop)</div>
+                <div class="nav-section">
+                    <p class="nav-section-title">WORKSPACE</p>
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-item"><i class="fas fa-bell"></i> Announcements</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-award"></i> Recognition</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-book"></i> Handbook</a></li>
+                        <li><a href="#" class="nav-item"><i class="fas fa-cog"></i> Settings</a></li>
+                    </ul>
+                </div>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar-sidebar">JS</div>
+                    <div class="user-details">
+                        <p class="user-name">John Smith</p>
+                        <p class="user-role">Senior Developer</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </aside>
 
-        <!-- Accessibility -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Accessibility Features</h2>
-            
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Focus States</h3>
-                    <div class="flex flex-wrap gap-4">
-                        <button class="btn btn-md btn-primary">Focusable Button</button>
-                        <input type="text" class="input input-md" placeholder="Focusable Input">
-                        <a href="#" class="btn btn-md btn-secondary">Focusable Link</a>
-                    </div>
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="content-header">
+                <div class="header-left">
+                    <h1 class="page-title">Welcome back, John!</h1>
+                    <p class="page-subtitle">Here's what's happening at your company today</p>
                 </div>
-
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Semantic HTML</h3>
-                    <div class="bg-bg-secondary p-4 rounded">
-                        <h4>Proper Heading Hierarchy</h4>
-                        <p>This section demonstrates proper semantic HTML structure with appropriate heading levels and ARIA attributes.</p>
-                        <button class="btn btn-sm btn-primary" aria-label="Primary action button">Action</button>
+                <div class="header-right">
+                    <div class="header-search">
+                        <i class="fas fa-search search-icon-header"></i>
+                        <input type="search" placeholder="Search anything..." class="search-input-header">
                     </div>
+                    <button class="header-btn">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="header-btn">
+                        <i class="fas fa-calendar"></i>
+                        <span>Today</span>
+                    </button>
                 </div>
+            </header>
 
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Design Consistency</h3>
-                    <div class="bg-bg-secondary p-4 rounded">
-                        <p>The design system ensures consistent styling across all components with unified color palette, typography, and spacing tokens.</p>
-                        <div class="mt-4 flex flex-wrap gap-2">
-                            <span class="badge badge-meeting">Consistent Spacing</span>
-                            <span class="badge badge-won">Unified Colors</span>
-                            <span class="badge badge-prospecting">Standard Typography</span>
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Alert Banner -->
+                <div class="alert-banner-modern">
+                    <div class="alert-content-modern">
+                        <div class="alert-icon-modern">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                        <div class="alert-text-modern">
+                            <h3>Open Enrollment Starts Today!</h3>
+                            <p>Don't miss the deadline - submit your benefits selections by January 31st</p>
                         </div>
                     </div>
+                    <button class="alert-close">
+                        <i class="fas fa-times"></i>
+                    </button>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Usage Guide -->
-        <section class="component-section">
-            <h2 class="text-2xl font-semibold mb-6">Usage Guide</h2>
-            
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Getting Started</h3>
-                    <div class="bg-bg-secondary p-4 rounded">
-                        <ol class="list-decimal list-inside space-y-2">
-                            <li>Include the compiled CSS: <code class="bg-bg-primary px-2 py-1 rounded text-sm">dist/output.css</code></li>
-                            <li>Include the JavaScript utilities: <code class="bg-bg-primary px-2 py-1 rounded text-sm">design-system.js</code></li>
-                            <li>Use design tokens via CSS custom properties or Tailwind classes</li>
-                            <li>Implement components using the provided class names</li>
-                        </ol>
+
+                <!-- Metrics Cards -->
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon metric-icon-employees">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+12%</span>
+                            </div>
+                        </div>
+                        <div class="metric-value">1,234</div>
+                        <div class="metric-label">Total Employees</div>
+                        <div class="metric-description">Active team members</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon metric-icon-attendance">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+5%</span>
+                            </div>
+                        </div>
+                        <div class="metric-value">94.2%</div>
+                        <div class="metric-label">Attendance Rate</div>
+                        <div class="metric-description">This week average</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon metric-icon-projects">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="metric-trend neutral">
+                                <i class="fas fa-minus"></i>
+                                <span>0%</span>
+                            </div>
+                        </div>
+                        <div class="metric-value">47</div>
+                        <div class="metric-label">Active Projects</div>
+                        <div class="metric-description">Across all departments</div>
+                    </div>
+
+                    <div class="metric-card">
+                        <div class="metric-header">
+                            <div class="metric-icon metric-icon-satisfaction">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="metric-trend positive">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>+8%</span>
+                            </div>
+                        </div>
+                        <div class="metric-value">4.8</div>
+                        <div class="metric-label">Satisfaction Score</div>
+                        <div class="metric-description">Employee feedback</div>
                     </div>
                 </div>
 
-                <div>
-                    <h3 class="text-lg font-medium mb-4">Build Process</h3>
-                    <div class="bg-bg-secondary p-4 rounded">
-                        <p class="mb-3">Available npm scripts:</p>
-                        <ul class="space-y-2 font-mono text-sm">
-                            <li><code class="bg-bg-primary px-2 py-1 rounded">npm run build:css</code> - Build CSS once</li>
-                            <li><code class="bg-bg-primary px-2 py-1 rounded">npm run watch:css</code> - Watch and rebuild CSS</li>
-                            <li><code class="bg-bg-primary px-2 py-1 rounded">npm run dev</code> - Start development server</li>
-                            <li><code class="bg-bg-primary px-2 py-1 rounded">npm run build</code> - Build for production</li>
-                        </ul>
-                    </div>
+                <!-- Main Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <!-- Company Announcements -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2>Company Announcements</h2>
+                            <a href="#" class="section-action">View All</a>
+                        </div>
+                        <div class="announcements-list">
+                            <article class="announcement-item">
+                                <div class="announcement-meta">
+                                    <span class="department-tag hr">HR</span>
+                                    <time class="announcement-time">2 hours ago</time>
+                                </div>
+                                <h3 class="announcement-title">New Hybrid Work Policy Implementation</h3>
+                                <p class="announcement-excerpt">Starting February 1st, all employees will have the flexibility to work from home up to 3 days per week.</p>
+                            </article>
+
+                            <article class="announcement-item">
+                                <div class="announcement-meta">
+                                    <span class="department-tag it">IT</span>
+                                    <time class="announcement-time">4 hours ago</time>
+                                </div>
+                                <h3 class="announcement-title">System Maintenance Window</h3>
+                                <p class="announcement-excerpt">Scheduled maintenance on Saturday from 2 AM to 6 AM EST. Services may be temporarily unavailable.</p>
+                            </article>
+
+                            <article class="announcement-item">
+                                <div class="announcement-meta">
+                                    <span class="department-tag leadership">Leadership</span>
+                                    <time class="announcement-time">1 day ago</time>
+                                </div>
+                                <h3 class="announcement-title">Q4 Results and 2024 Vision</h3>
+                                <p class="announcement-excerpt">Join our CEO for an all-hands meeting this Thursday at 3 PM to discuss achievements and roadmap.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- My Schedule -->
+                    <section class="dashboard-section">
+                        <div class="section-header">
+                            <h2>My Schedule</h2>
+                            <div class="schedule-filter">
+                                <button class="filter-btn active">Today</button>
+                                <button class="filter-btn">Week</button>
+                            </div>
+                        </div>
+                        <div class="schedule-list">
+                            <div class="schedule-item urgent">
+                                <div class="schedule-time">09:00 AM</div>
+                                <div class="schedule-details">
+                                    <h4>Team Briefing</h4>
+                                    <p>Discuss priorities for the week</p>
+                                    <div class="schedule-attendee">
+                                        <img src="https://via.placeholder.com/24" alt="Ethan Miller" class="attendee-avatar">
+                                        <span>Ethan Miller</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-status critical">Critical</div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="schedule-time">10:30 AM</div>
+                                <div class="schedule-details">
+                                    <h4>Compensation Review</h4>
+                                    <p>Review and update salary structures</p>
+                                    <div class="schedule-attendee">
+                                        <img src="https://via.placeholder.com/24" alt="Emily Johnson" class="attendee-avatar">
+                                        <span>Emily Johnson</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-status urgent">Urgent</div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="schedule-time">12:00 PM</div>
+                                <div class="schedule-details">
+                                    <h4>Administrative Tasks</h4>
+                                    <p>Handle paperwork and documentation</p>
+                                    <div class="schedule-attendee">
+                                        <img src="https://via.placeholder.com/24" alt="Olivia Carter" class="attendee-avatar">
+                                        <span>Olivia Carter</span>
+                                    </div>
+                                </div>
+                                <div class="schedule-status routine">Routine</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Recent Recognition -->
+                    <section class="dashboard-section recognition-section">
+                        <div class="section-header">
+                            <h2>Recent Recognition</h2>
+                            <a href="#" class="section-action">See All</a>
+                        </div>
+                        <div class="recognition-list">
+                            <div class="recognition-card">
+                                <div class="recognition-header">
+                                    <div class="recognition-avatar">MR</div>
+                                    <div class="recognition-info">
+                                        <h4>Maria Rodriguez</h4>
+                                        <p>recognized by Alex Chen • Marketing</p>
+                                    </div>
+                                    <div class="recognition-celebration">🎉</div>
+                                </div>
+                                <blockquote class="recognition-message">
+                                    "Amazing work on the Q4 campaign launch! Your attention to detail made all the difference."
+                                </blockquote>
+                            </div>
+
+                            <div class="recognition-card">
+                                <div class="recognition-header">
+                                    <div class="recognition-avatar">DK</div>
+                                    <div class="recognition-info">
+                                        <h4>David Kim</h4>
+                                        <p>recognized by Lisa Wang • Engineering</p>
+                                    </div>
+                                    <div class="recognition-celebration">⭐</div>
+                                </div>
+                                <blockquote class="recognition-message">
+                                    "Thank you for mentoring our new team members. Your patience has been invaluable."
+                                </blockquote>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Actions -->
+                    <section class="dashboard-section quick-actions">
+                        <div class="section-header">
+                            <h2>Quick Actions</h2>
+                        </div>
+                        <div class="actions-grid">
+                            <button class="action-item">
+                                <div class="action-icon">
+                                    <i class="fas fa-plus"></i>
+                                </div>
+                                <span>Add Employee</span>
+                            </button>
+                            <button class="action-item">
+                                <div class="action-icon">
+                                    <i class="fas fa-calendar-plus"></i>
+                                </div>
+                                <span>Schedule Meeting</span>
+                            </button>
+                            <button class="action-item">
+                                <div class="action-icon">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <span>Make Announcement</span>
+                            </button>
+                            <button class="action-item">
+                                <div class="action-icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </div>
+                                <span>Generate Report</span>
+                            </button>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
+        </main>
     </div>
 
     <script src="design-system.js"></script>
 </body>
-</html> 
+</html>
